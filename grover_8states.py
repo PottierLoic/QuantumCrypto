@@ -1,3 +1,4 @@
+
 import math
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import GroverOperator
@@ -5,7 +6,7 @@ from qiskit.visualization import plot_distribution
 from qiskit.primitives import Sampler
 import matplotlib.pyplot as plt
 
-n = 4 
+n = 8
 qc = QuantumCircuit(n)
 
 qc.h(range(n))
@@ -29,7 +30,7 @@ result = job.result()
 
 quasi_dist = result.quasi_dists[0]
 
-plot_distribution(quasi_dist, title="Grover's Algorithm Results with 4 Qubits")
+plot_distribution(quasi_dist, title="Grover's Algorithm Results with 8 Qubits")
 plt.show()
 
 for i in range(2**n):
